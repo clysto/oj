@@ -17,7 +17,12 @@
       "preLaunchTask": "OJ Build",
       "environment": [],
       "externalConsole": false,
-      "MIMode": "lldb"
+      "MIMode": "lldb",
+      "setupCommands": [
+        {
+          "text": "settings set target.input-path ${workspaceFolder}/INPUT"
+        }
+      ]
     }
   ]
 }

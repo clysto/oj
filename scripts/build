@@ -1,0 +1,13 @@
+#!/bin/bash
+
+source_file=$1
+binary_file=$(echo $(basename $source_file) | cut -f 1 -d '.')
+
+mkdir -p .build
+
+if [ -f .build/$binary_file ] && [ .build/$binary_file -nt $source_file ]; then
+    exit 0
+fi
+
+echo "Compiling $source_file"
+g++ -std=c++17 -g -o .build/$binary_file $source_file

@@ -1,0 +1,5 @@
+/INPUT
+.cache
+.build
+.DS_Store
+.vscode
